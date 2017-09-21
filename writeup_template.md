@@ -20,6 +20,7 @@
 [image1]: ./misc_images/misc1.png
 [image2]: ./misc_images/misc3.png
 [image3]: ./misc_images/misc2.png
+[image1.5]: ./misc_images/misc1.5.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -37,8 +38,6 @@ You're reading it!
 Here is the annotated figure of the robot.
 
 ![alt text][image1]
-
-#### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
 
 Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 --- | --- | --- | --- | ---
@@ -74,7 +73,29 @@ In this robot arm,
 
 **Link 6 :**, `Z5`(0 1 0) and `Z6`(1, 0, 0) are *perpendicular* and *intersect* at `O5`, so `alpha5 = -pi/2` and `a5 = 0`, `d6 = 0`, since `X5` and `X6` are *collinear*.   
 
-**Link 7(Gripper Link) :**, this is a fixed link, with a translation along `Z6`. So, `Z6` and `Zg` are *collinear*, so `alpha6 = 0`, `a6 = 0` and `d6 = 0.193(joint6.x) + 0.11(gripper_joint.x)`. Also, since this is fixed(w.r.t link 6), `q7 = 0`.  
+**Link 7(Gripper Link) :**, this is a fixed link, with a translation along `Z6`. So, `Z6` and `Zg` are *collinear*, so `alpha6 = 0`, `a6 = 0` and `d6 = 0.193(joint6.x) + 0.11(gripper_joint.x)`. Also, since this is fixed(w.r.t link 6), `q7 = 0`.
+
+#### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.  
+
+This is the transformation matrix from i-1 to i
+![alt text][image1.5]
+
+An individual transformation matrix can be created like this,
+```python
+def createMatrix(alpha, a, q, d):
+    mat =  Matrix([[            cos(q),           -sin(q),           0,             a],
+                   [ sin(q)*cos(alpha), cos(q)*cos(alpha), -sin(alpha), -sin(alpha)*d],
+                   [ sin(q)*sin(alpha), cos(q)*sin(alpha),  cos(alpha),  cos(alpha)*d],
+                   [                 0,                 0,           0,             1]])
+
+    return mat
+```   
+with proper sets of parameters.
+
+A generalized homogeneous transform between base_link and gripper_link can be achieved by multiplying these matrices together.
+`T0_G = T0_1*T1_2*T2_3*T3_4*T4_5*T5_6*T6_G`  
+
+To get two frames to align, `T0_G` needs to be rotated `pi` about the Z axis and `- pi` about Y axis.
 
 #### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
 
