@@ -17,6 +17,13 @@ from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from geometry_msgs.msg import Pose
 from mpmath import *
 from sympy import *
+def createMatrix(alpha, a, q, d):
+    mat =  Matrix([[            cos(q),           -sin(q),           0,             a],
+                   [ sin(q)*cos(alpha), cos(q)*cos(alpha), -sin(alpha), -sin(alpha)*d],
+                   [ sin(q)*sin(alpha), cos(q)*sin(alpha),  cos(alpha),  cos(alpha)*d],
+                   [                 0,                 0,           0,             1]])
+
+    return mat
 
 
 def handle_calculate_IK(req):
@@ -28,21 +35,45 @@ def handle_calculate_IK(req):
 		
         ### Your FK code here
         # Create symbols
-	#
-	#   
-	# Create Modified DH parameters
-	#
-	#            
-	# Define Modified DH Transformation matrix
-	#
-	#
-	# Create individual transformation matrices
-	#
-	#
-	# Extract rotation matrices from the transformation matrices
-	#
-	#
-        ###
+        d0, d1, d2, d3, d4, d5, d6 = symbols('d0:7')
+        a0, a1, a2, a3, a4, a5, a6 = symbols('a0:7')
+        alpha0, alpha1, alpha2, alpha3, alpha4, alpha5, alpha6 = symbols('alpha0:7')
+        q0, q1, q2, q3, q4, q5, q6 = symbols('q0:7')
+
+        # Create Modified DH parameters
+        dh_params = {alpha0:     0, a0:     0, d0:   0.75, q0: q0,
+                     alpha1: -pi/2, a1:  0.35, d1:      0, q1: -pi/2 + q1,
+                     alpha2:     0, a2:  1.25, d2:      0, q2: q2,
+                     alpha3: -pi/2, a3:-0.054, d3:   1.50, q3: q3,
+                     alpha4:  pi/2, a4:     0, d4:   1.50, q4: q4,
+                     alpha5: -pi/2, a5:     0, d5:      0, q5: q5,
+                     alpha6:     0, a6:     0, d6:  0.303, q6: 0}
+
+        # Define Modified DH Transformation matrix
+        T0_1 = createMatrix(alpha0, a0, q0, d0)
+        T1_2 = createMatrix(alpha1, a1, q1, d1)
+        T2_3 = createMatrix(alpha2, a2, q2, d2)
+        T3_4 = createMatrix(alpha3, a3, q3, d3)
+        T4_5 = createMatrix(alpha4, a4, q4, d4)
+        T5_6 = createMatrix(alpha5, a5, q5, d5)
+        T6_G = createMatrix(alpha6, a6, q6, d6)
+
+        # Create individual transformation matrices
+        T0_2 = T0_1 * T1_2
+        T0_3 = T0_2 * T2_3
+        T0_4 = T0_3 * T3_4
+        T0_5 = T0_4 * T4_5
+        T0_6 = T0_5 * T5_6
+        T0_G = T0_6 * T6_G
+
+        # Extract rotation matrices from the transformation matrices
+        R0_1 = T0_1[0:3, 0:3]
+        R0_2 = T0_2[0:3, 0:3]
+        R0_3 = T0_3[0:3, 0:3]
+        R0_4 = T0_4[0:3, 0:3]
+        R0_5 = T0_5[0:3, 0:3]
+        R0_6 = T0_6[0:3, 0:3]
+        R0_G = T0_G[0:3, 0:3]
 
         # Initialize service response
         joint_trajectory_list = []
