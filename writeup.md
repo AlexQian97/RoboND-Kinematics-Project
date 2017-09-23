@@ -1,5 +1,4 @@
 ## Project: Kinematics Pick & Place
-### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
 ---
 
@@ -100,6 +99,8 @@ To get two frames to align, `T0_G` needs to be rotated `pi` about the Z axis and
 #### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
 
 And here's where you can draw out and show your math for the derivation of your theta angles. 
+
+The last three angles (q4, q5, q6) do not affect the position of of wrist center (the intersection of z-axis of the last three joints). So we can divide IK problem into two problems, position (contolled by q1, q2, q3) and orientation (controlled by q4, q5, q6).
 
 ![alt text][image2]
 
