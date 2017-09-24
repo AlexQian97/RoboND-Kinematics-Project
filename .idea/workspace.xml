@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="022dd887-2955-4f7a-907f-c389dff03fe5" name="Default" comment="Forward done">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IK_debug.py" afterPath="$PROJECT_DIR$/IK_debug.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kuka_arm/launch/inverse_kinematics.launch" afterPath="$PROJECT_DIR$/kuka_arm/launch/inverse_kinematics.launch" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kuka_arm/scripts/IK_server.py" afterPath="$PROJECT_DIR$/kuka_arm/scripts/IK_server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,44 +18,20 @@
       <file leaf-file-name="IK_server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kuka_arm/scripts/IK_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="152" column="60" lean-forward="false" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
+            <state relative-caret-position="1242">
+              <caret line="141" column="23" lean-forward="false" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="temp.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kuka_arm/scripts/temp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4032">
-              <caret line="224" column="0" lean-forward="true" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
-              <folding>
-                <element signature="e#251#263#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IK_debug.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IK_debug.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IK_debug.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
-              <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="191" selection-end-column="43" />
+            <state relative-caret-position="632">
+              <caret line="151" column="41" lean-forward="false" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="temp.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/temp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4284">
-              <caret line="243" column="1" lean-forward="false" selection-start-line="243" selection-start-column="1" selection-end-line="243" selection-end-column="1" />
-              <folding>
-                <element signature="e#38#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,6 +47,9 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>simplify</find>
+    </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
@@ -83,13 +62,14 @@
       <list>
         <option value="$PROJECT_DIR$/kuka_arm/temp.py" />
         <option value="$PROJECT_DIR$/temp.py" />
+        <option value="$PROJECT_DIR$/kuka_arm/scripts/temp.py" />
+        <option value="$PROJECT_DIR$/kuka_arm/scripts/temp/IK_server.py" />
         <option value="$PROJECT_DIR$/IK_debug.py" />
         <option value="$PROJECT_DIR$/kuka_arm/scripts/IK_server.py" />
-        <option value="$PROJECT_DIR$/kuka_arm/scripts/temp.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="35" />
     <option name="width" value="802" />
     <option name="height" value="425" />
@@ -136,8 +116,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="/usr/bin/python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/kuka_arm/scripts/temp/IK_server.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/kuka_arm/scripts/temp/IK_server.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -197,9 +178,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="35" width="1282" height="781" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15640195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15795091" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -253,24 +235,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Forward done" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/kuka_arm/scripts/IK_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2628">
+          <caret line="152" column="60" lean-forward="false" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IK_debug.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
+        <state relative-caret-position="1296">
           <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="191" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kuka_arm/scripts/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4032">
+          <caret line="224" column="0" lean-forward="true" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#251#263#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -279,9 +271,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4284">
           <caret line="243" column="1" lean-forward="false" selection-start-line="243" selection-start-column="1" selection-end-line="243" selection-end-column="1" />
-          <folding>
-            <element signature="e#38#57#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -297,9 +287,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="191" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -307,9 +295,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4284">
           <caret line="243" column="1" lean-forward="false" selection-start-line="243" selection-start-column="1" selection-end-line="243" selection-end-column="1" />
-          <folding>
-            <element signature="e#38#57#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kuka_arm/scripts/IK_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IK_debug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="191" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4284">
+          <caret line="243" column="1" lean-forward="false" selection-start-line="243" selection-start-column="1" selection-end-line="243" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -340,36 +350,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4284">
           <caret line="243" column="1" lean-forward="false" selection-start-line="243" selection-start-column="1" selection-end-line="243" selection-end-column="1" />
-          <folding>
-            <element signature="e#38#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IK_debug.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="191" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kuka_arm/scripts/IK_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="152" column="60" lean-forward="false" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kuka_arm/scripts/temp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4032">
-          <caret line="224" column="0" lean-forward="true" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+        <state relative-caret-position="1569">
+          <caret line="194" column="35" lean-forward="true" selection-start-line="194" selection-start-column="35" selection-end-line="194" selection-end-column="35" />
           <folding>
-            <element signature="e#251#263#0" expanded="true" />
+            <element signature="e#251#263#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kuka_arm/scripts/temp/IK_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1984">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kuka_arm/scripts/IK_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="141" column="23" lean-forward="false" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IK_debug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="151" column="41" lean-forward="false" selection-start-line="151" selection-start-column="41" selection-end-line="151" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
