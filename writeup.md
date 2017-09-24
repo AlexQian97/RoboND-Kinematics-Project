@@ -20,6 +20,7 @@
 [image2]: ./misc_images/misc3.png
 [image3]: ./misc_images/misc2.png
 [image1.5]: ./misc_images/misc1.5.png
+[image4]: ./misc_images/misc4.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -102,7 +103,19 @@ And here's where you can draw out and show your math for the derivation of your 
 
 The last three angles (q4, q5, q6) do not affect the position of of wrist center (the intersection of z-axis of the last three joints). So we can divide IK problem into two problems, position (contolled by q1, q2, q3) and orientation (controlled by q4, q5, q6).
 
-![alt text][image2]
+I spent a lot of time trying to solve the IK problem until I found this image from "https://github.com/jaycode/RoboND-Kinematics-Project/README.md"
+
+![alt_text][image4]
+
+At first, `theta1` can be solved by looking at the arm from top and use basic geometry.
+
+By this image, `theta2` and `theta3` can be solved easily with geometry.
+
+To seperate orientation from position. The formula below is used.
+
+![alt text][image3]
+
+After seperation, `theta4`, `theta5` and `theta6` can be solved by `atan2` function.
 
 ### Project Implementation
 
@@ -112,7 +125,5 @@ The last three angles (q4, q5, q6) do not affect the position of of wrist center
 Here I'll talk about the code, what techniques I used, what worked and why, where the implementation might fail and how I might improve it if I were going to pursue this project further.  
 
 
-And just for fun, another example image:
-![alt text][image3]
 
 
