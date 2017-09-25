@@ -47,7 +47,7 @@ def handle_calculate_IK(req):
                      alpha1: -pi / 2, a1: 0.35, d1: 0, q1: -pi / 2 + q1,
                      alpha2: 0, a2: 1.25, d2: 0, q2: q2,
                      alpha3: -pi / 2, a3: -0.054, d3: 1.50, q3: q3,
-                     alpha4: pi / 2, a4: 0, d4: 0, q4: q4,
+                     alpha4: pi / 2, a4: 0, d4: 1.50, q4: q4,
                      alpha5: -pi / 2, a5: 0, d5: 0, q5: q5,
                      alpha6: 0, a6: 0, d6: 0.303, q6: 0}
 

@@ -88,7 +88,7 @@ def test_code(test_case):
 				 alpha1: -pi / 2, a1: 0.35, d1: 0, q1: -pi / 2 + q1,
 				 alpha2: 0, a2: 1.25, d2: 0, q2: q2,
 				 alpha3: -pi / 2, a3: -0.054, d3: 1.50, q3: q3,
-				 alpha4: pi / 2, a4: 0, d4: 0, q4: q4,
+				 alpha4: pi / 2, a4: 0, d4: 1.50, q4: q4,
 				 alpha5: -pi / 2, a5: 0, d5: 0, q5: q5,
 				 alpha6: 0, a6: 0, d6: 0.303, q6: 0}
     # Define Modified DH Transformation matrix
@@ -194,18 +194,14 @@ def test_code(test_case):
     ## For additional debugging add your forward kinematics here. Use your previously calculated thetas
     ## as the input and output the position of your end effector as your_ee = [x,y,z]
 
-    EE = T0_G.evalf(subs={q0: theta1, q1: theta2, q2: theta3, q3: theta4, q4: theta5, q5: theta6})
-    # print("!!!!!!!!!!!!!!!!!!!!!!!!")
-    # print(T0_G)
-    # print("!!!!!!!!!!!!!!!!!!!!!!")
-    # print(EE)
+    ## (OPTIONAL) YOUR CODE HERE!
 
     ## End your code input for forward kinematics here!
     ########################################################################################
 
     ## For error analysis please set the following variables of your WC location and EE location in the format of [x,y,z]
-    your_wc = [WC[0], WC[1], WC[2]]  # <--- Load your calculated WC values in this array
-    your_ee = EE[:3, 3]  # <--- Load your calculated end effector value from your forward kinematics
+    your_wc = [1, 1, 1]  # <--- Load your calculated WC values in this array
+    your_ee = [1, 1, 1]  # <--- Load your calculated end effector value from your forward kinematics
     ########################################################################################
 
     ## Error analysis
@@ -243,12 +239,6 @@ def test_code(test_case):
     # Find FK EE error
     if not (sum(your_ee) == 3):
         ee_x_e = abs(your_ee[0] - test_case[0][0][0])
-        # print("==========================")
-        # print(ee_x_e)
-        # print("==========================")
-        # print(your_ee[0])
-        # print("==========================")
-        # print(test_case[0][0][0])
         ee_y_e = abs(your_ee[1] - test_case[0][0][1])
         ee_z_e = abs(your_ee[2] - test_case[0][0][2])
         ee_offset = sqrt(ee_x_e ** 2 + ee_y_e ** 2 + ee_z_e ** 2)
