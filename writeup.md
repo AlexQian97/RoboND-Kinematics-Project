@@ -124,6 +124,8 @@ After seperation, `theta4`, `theta5` and `theta6` can be solved by `atan2` funct
 
 Here I'll talk about the code, what techniques I used, what worked and why, where the implementation might fail and how I might improve it if I were going to pursue this project further.  
 
+The main part of my solution is described above. The Inverse Kinematics problem can be decoupled into Inverse Position Kinematics and Inverse Orientation Kinematics, which are easy to solve with geometry.
 
+The hardest problem I have encountered in this project is that the symbollic rotational matrix is overwritten in the loop. As a result, the rotational matrix will never be updated in the later loops because `.eval()` function will never find the symbols to replace after the first run.
 
-
+The result is good enough. Every can goes to the bin eventually. One of the potential imporvement is that the angles can be normalized into the range between 0 to pi so that one joint would not rotate one whole circle but do nothing in fact.
