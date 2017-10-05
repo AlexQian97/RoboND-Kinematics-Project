@@ -117,13 +117,13 @@ def handle_calculate_IK(req):
             ### Your IK code here
             # Compensate for rotation discrepancy between DH parameters and Gazebo
 
-            ROT_EE = ROT_EE.subs({"r": roll, "p": pitch, "y": yaw})
+            ROT_EE_num = ROT_EE.subs({"r": roll, "p": pitch, "y": yaw})
 
             EE = Matrix([[px],
                          [py],
                          [pz]])
 
-            WC = EE - 0.303 * ROT_EE[:, 2]
+            WC = EE - 0.303 * ROT_EE_num[:, 2]
 
             # Calculate joint angles using Geometric IK method
             theta1 = atan2(WC[1], WC[0])
@@ -141,9 +141,9 @@ def handle_calculate_IK(req):
             theta2 = pi / 2 - angle_a - atan2(WC[2] - 0.75, sqrt(WC[0] * WC[0] + WC[1] * WC[1]) - 0.35)
             theta3 = pi / 2 - (angle_b + 0.036)
 
-            R0_3 = R0_3.evalf(subs={q0: theta1, q1: theta2, q2: theta3})
+            R0_3_num = R0_3.evalf(subs={q0: theta1, q1: theta2, q2: theta3})
 
-            R3_6 = R0_3.transpose() * ROT_EE
+            R3_6 = R0_3_num.transpose() * ROT_EE_num
 
             theta5 = atan2(sqrt(R3_6[0, 2] ** 2 + R3_6[2, 2] ** 2), R3_6[1, 2])
             if sin(theta5) < 0:

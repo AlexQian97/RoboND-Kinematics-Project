@@ -177,7 +177,7 @@ def test_code(test_case):
 
     R0_3 = R0_3.evalf(subs={q0: theta1, q1: theta2, q2: theta3})
 
-    R3_6 = R0_3.inv("LU") * ROT_EE
+    R3_6 = R0_3.transpose() * ROT_EE
 
     theta5 = atan2(sqrt(R3_6[0, 2] ** 2 + R3_6[2, 2] ** 2), R3_6[1, 2])
     if sin(theta5) < 0:
@@ -260,6 +260,6 @@ def test_code(test_case):
 
 if __name__ == "__main__":
     # Change test case number for different scenarios
-    test_case_number = 1
+    test_case_number = 2
 
     test_code(test_cases[test_case_number])
