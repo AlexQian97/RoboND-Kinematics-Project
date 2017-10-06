@@ -21,6 +21,7 @@
 [image3]: ./misc_images/misc3.png
 [image1.5]: ./misc_images/misc1.5.png
 [image4]: ./misc_images/misc4.png
+[image5]: ./misc_images/kuka_pickplace.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -129,3 +130,5 @@ The main part of my solution is described above. The Inverse Kinematics problem 
 The hardest problem I have encountered in this project is that the symbollic rotational matrix is overwritten in the loop. As a result, the rotational matrix will never be updated in the later loops because `.eval()` function will never find the symbols to replace after the first run.
 
 The result is good enough. Every can goes to the bin eventually. One of the potential imporvement is that the angles can be normalized into the range between 0 to pi so that one joint would not rotate one whole circle but do nothing in fact.
+
+![alt text][image5]
